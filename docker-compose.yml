@@ -3,17 +3,17 @@ version: '2'
 services:
   proxy:
     build: ./
-  networks:
-    - site1
-    - site2
-  ports:
-    - 80:80
-    - 443:443
+    networks:
+      - webservice1
+      - webservice2
+    ports:
+      - 8080:80
+      - 8443:443
 
 networks:
-  site1:
+  webservice1:
     external:
-      name: site1_default
-  site2:
+      name: webservice1_default
+  webservice2:
     external:
-      name: site2_default
+      name: webservice2_default

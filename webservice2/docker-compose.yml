@@ -3,6 +3,7 @@ version: '2'
 services:
   app:
     image: nginx:1.9
+    hostname: web2
     volumes:
       - .:/usr/share/nginx/html/
     expose:
